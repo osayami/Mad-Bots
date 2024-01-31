@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bu5m4j8ocx6d2"]
 
-[ext_resource type="Script" path="res://interface_controller.gd" id="1_fgoqc"]
-[ext_resource type="Texture2D" uid="uid://dppmyveeki7af" path="res://star.png" id="2_gabhf"]
+[ext_resource type="Script" path="res://UI/interface_controller.gd" id="1_j4kqk"]
+[ext_resource type="Texture2D" uid="uid://dppmyveeki7af" path="res://UI/star.png" id="2_8mvqa"]
 
 [node name="InterfaceController" type="CanvasLayer" groups=["InterfaceController"]]
-script = ExtResource("1_fgoqc")
+script = ExtResource("1_j4kqk")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -82,7 +82,6 @@ text = "1000
 "
 
 [node name="Star1" type="TextureRect" parent="Popup"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.252
@@ -94,7 +93,7 @@ offset_top = -29.0
 offset_right = 425.64
 offset_bottom = 483.0
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("2_gabhf")
+texture = ExtResource("2_8mvqa")
 
 [node name="Star2" type="TextureRect" parent="Popup"]
 visible = false
@@ -109,7 +108,7 @@ offset_top = -29.4
 offset_right = 553.44
 offset_bottom = 482.6
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("2_gabhf")
+texture = ExtResource("2_8mvqa")
 
 [node name="Star3" type="TextureRect" parent="Popup"]
 visible = false
@@ -124,7 +123,7 @@ offset_top = -31.4
 offset_right = 681.44
 offset_bottom = 480.6
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("2_gabhf")
+texture = ExtResource("2_8mvqa")
 
 [node name="WonOrLose" type="RichTextLabel" parent="Popup"]
 layout_mode = 0
@@ -155,7 +154,7 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -88.0
-offset_right = 154.0
+offset_right = 169.0
 grow_vertical = 0
 text = "Restart"
 

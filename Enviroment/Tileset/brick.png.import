@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i445lmo1xi4b"
-path="res://.godot/imported/brick.png-1446c5da5e46f16d713f2e07ef76c4ab.ctex"
+path="res://.godot/imported/brick.png-6cba7109279a225c44e401bbd888e1f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tileset/brick.png"
-dest_files=["res://.godot/imported/brick.png-1446c5da5e46f16d713f2e07ef76c4ab.ctex"]
+source_file="res://Enviroment/Tileset/brick.png"
+dest_files=["res://.godot/imported/brick.png-6cba7109279a225c44e401bbd888e1f0.ctex"]
 
 [params]
 

@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://cextfv4gtljvs"]
 
-[ext_resource type="Script" path="res://slingshot.gd" id="1_qgh7y"]
-[ext_resource type="Texture2D" uid="uid://ck7b571srdd08" path="res://SlingshotBadPiggies.webp" id="2_qgc6i"]
+[ext_resource type="Script" path="res://Enviroment/slingshot.gd" id="1_klmkk"]
+[ext_resource type="Texture2D" uid="uid://ck7b571srdd08" path="res://Enviroment/SlingshotBadPiggies.webp" id="2_gbhdy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uluta"]
 radius = 150.0
 
 [node name="Slingshot" type="Node2D" groups=["Slingshot"]]
-script = ExtResource("1_qgh7y")
+script = ExtResource("1_klmkk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-24, -259)
-texture = ExtResource("2_qgc6i")
+texture = ExtResource("2_gbhdy")
 
 [node name="LeftLine" type="Line2D" parent="."]
 position = Vector2(1, -20)

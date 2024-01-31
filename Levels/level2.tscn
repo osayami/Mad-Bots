@@ -1,15 +1,15 @@
 [gd_scene load_steps=10 format=3 uid="uid://qd0q4ccwtimy"]
 
-[ext_resource type="PackedScene" uid="uid://dev46t71xmkjx" path="res://Bird.tscn" id="1_jc4n4"]
-[ext_resource type="PackedScene" uid="uid://cextfv4gtljvs" path="res://slingshot.tscn" id="2_y4ooi"]
-[ext_resource type="Script" path="res://CameraController.gd" id="3_ba175"]
-[ext_resource type="Texture2D" uid="uid://dtl0whb5f6hg3" path="res://Tileset/2.png" id="4_3682j"]
-[ext_resource type="PackedScene" uid="uid://b6fv7sddb44xx" path="res://brick.tscn" id="5_7nkr3"]
-[ext_resource type="PackedScene" uid="uid://bas0vcc3bmrwr" path="res://Pig.tscn" id="6_5o3q6"]
-[ext_resource type="PackedScene" uid="uid://bu5m4j8ocx6d2" path="res://interface_controller.tscn" id="7_2dnkk"]
+[ext_resource type="PackedScene" uid="uid://dev46t71xmkjx" path="res://Characters/Bird.tscn" id="1_mndl6"]
+[ext_resource type="PackedScene" uid="uid://cextfv4gtljvs" path="res://Enviroment/slingshot.tscn" id="2_v0460"]
+[ext_resource type="Script" path="res://Characters/CameraController.gd" id="3_myt6i"]
+[ext_resource type="Texture2D" uid="uid://dtl0whb5f6hg3" path="res://Enviroment/Tileset/2.png" id="4_i2udg"]
+[ext_resource type="PackedScene" uid="uid://b6fv7sddb44xx" path="res://Enviroment/brick.tscn" id="5_h83vo"]
+[ext_resource type="PackedScene" uid="uid://bas0vcc3bmrwr" path="res://Characters/Pig.tscn" id="6_oupbb"]
+[ext_resource type="PackedScene" uid="uid://bu5m4j8ocx6d2" path="res://UI/interface_controller.tscn" id="7_jqode"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bv7cd"]
-texture = ExtResource("4_3682j")
+texture = ExtResource("4_i2udg")
 texture_region_size = Vector2i(8, 8)
 0:0/size_in_atlas = Vector2i(16, 16)
 0:0/0 = 0
@@ -24,18 +24,18 @@ sources/3 = SubResource("TileSetAtlasSource_bv7cd")
 
 [node name="GameLoop" type="Node2D"]
 
-[node name="Bird" parent="." instance=ExtResource("1_jc4n4")]
+[node name="Bird" parent="." instance=ExtResource("1_mndl6")]
 position = Vector2(-1055, 135)
 
-[node name="Bird2" parent="." instance=ExtResource("1_jc4n4")]
+[node name="Bird2" parent="." instance=ExtResource("1_mndl6")]
 position = Vector2(-1055, 0)
 
-[node name="Slingshot" parent="." instance=ExtResource("2_y4ooi")]
+[node name="Slingshot" parent="." instance=ExtResource("2_v0460")]
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["Camera"]]
 position = Vector2(1668, -679)
 zoom = Vector2(0.26, 0.26)
-script = ExtResource("3_ba175")
+script = ExtResource("3_myt6i")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-2, 0)
@@ -46,42 +46,42 @@ layer_0/tile_data = PackedInt32Array(524222, 3, 0, 524223, 3, 0, 524224, 3, 0, 5
 [node name="Bricks" type="Node2D" parent="."]
 position = Vector2(566, 0)
 
-[node name="Brick" parent="Bricks" instance=ExtResource("5_7nkr3")]
+[node name="Brick" parent="Bricks" instance=ExtResource("5_h83vo")]
 position = Vector2(1106, -91)
 
-[node name="Brick2" parent="Bricks" instance=ExtResource("5_7nkr3")]
+[node name="Brick2" parent="Bricks" instance=ExtResource("5_h83vo")]
 position = Vector2(1304, -91)
 
-[node name="Brick3" parent="Bricks" instance=ExtResource("5_7nkr3")]
+[node name="Brick3" parent="Bricks" instance=ExtResource("5_h83vo")]
 position = Vector2(1202, -212)
 rotation = 1.5708
 scale = Vector2(1, 1.56)
 
-[node name="Brick7" parent="Bricks" instance=ExtResource("5_7nkr3")]
+[node name="Brick7" parent="Bricks" instance=ExtResource("5_h83vo")]
 position = Vector2(1472, -83)
 
-[node name="Brick8" parent="Bricks" instance=ExtResource("5_7nkr3")]
+[node name="Brick8" parent="Bricks" instance=ExtResource("5_h83vo")]
 position = Vector2(1670, -83)
 
-[node name="Brick9" parent="Bricks" instance=ExtResource("5_7nkr3")]
+[node name="Brick9" parent="Bricks" instance=ExtResource("5_h83vo")]
 position = Vector2(1568, -204)
 rotation = 1.5708
 scale = Vector2(1, 1.56)
 
-[node name="Brick4" parent="Bricks" instance=ExtResource("5_7nkr3")]
+[node name="Brick4" parent="Bricks" instance=ExtResource("5_h83vo")]
 position = Vector2(1102, -347)
 
-[node name="Brick5" parent="Bricks" instance=ExtResource("5_7nkr3")]
+[node name="Brick5" parent="Bricks" instance=ExtResource("5_h83vo")]
 position = Vector2(1300, -347)
 
-[node name="Brick6" parent="Bricks" instance=ExtResource("5_7nkr3")]
+[node name="Brick6" parent="Bricks" instance=ExtResource("5_h83vo")]
 position = Vector2(1198, -468)
 rotation = 1.5708
 
-[node name="Pig" parent="." instance=ExtResource("6_5o3q6")]
+[node name="Pig" parent="." instance=ExtResource("6_oupbb")]
 position = Vector2(1766, -578)
 
-[node name="Pig2" parent="." instance=ExtResource("6_5o3q6")]
+[node name="Pig2" parent="." instance=ExtResource("6_oupbb")]
 position = Vector2(2159, -317)
 
-[node name="InterfaceController" parent="." instance=ExtResource("7_2dnkk")]
+[node name="InterfaceController" parent="." instance=ExtResource("7_jqode")]

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ryeefmwmfjai"
-path.s3tc="res://.godot/imported/3-bg-full.png-fe91c298ad065990b71c750e0ba5e0c6.s3tc.ctex"
-path.etc2="res://.godot/imported/3-bg-full.png-fe91c298ad065990b71c750e0ba5e0c6.etc2.ctex"
+uid="uid://cusj2ny0tj6ik"
+path.s3tc="res://.godot/imported/tilemap-bg.png-e5bd8761f7d666d2f432eb27cc74ac80.s3tc.ctex"
+path.etc2="res://.godot/imported/tilemap-bg.png-e5bd8761f7d666d2f432eb27cc74ac80.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Tileset/store/3-bg-full.png"
-dest_files=["res://.godot/imported/3-bg-full.png-fe91c298ad065990b71c750e0ba5e0c6.s3tc.ctex", "res://.godot/imported/3-bg-full.png-fe91c298ad065990b71c750e0ba5e0c6.etc2.ctex"]
+source_file="res://Enviroment/Tileset/store/tilemap-bg.png"
+dest_files=["res://.godot/imported/tilemap-bg.png-e5bd8761f7d666d2f432eb27cc74ac80.s3tc.ctex", "res://.godot/imported/tilemap-bg.png-e5bd8761f7d666d2f432eb27cc74ac80.etc2.ctex"]
 
 [params]
 

@@ -17,7 +17,7 @@ func PopupLevelCompleted(win:bool , score):
 	$Popup/ScoreValue.text = str(int(GameManager.Score))
 	$HUD.visible = false
 	if win:
-		$Popup/WonOrLose.text = "You Won!"
+		#$Popup/WonOrLose.text = "You Won!"
 		var tween = get_tree().create_tween()
 		if score > 20:
 			$Popup/Star1.visible=true
@@ -37,7 +37,7 @@ func PopupLevelCompleted(win:bool , score):
 
 		$Popup/ScoreValue.text = str(int(GameManager.Score))
 	else:
-		$Popup/WonOrLose.text = "You lost!"
+		#$Popup/WonOrLose.text = "You lost!"
 		$Popup/NextLevelButton.disabled = true
 		$Popup/ScoreLabel.visible = false 
 		$Popup/ScoreValue.visible = false

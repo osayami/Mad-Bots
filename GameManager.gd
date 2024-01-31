@@ -1,3 +1,4 @@
+@tool
 extends Node2D
 
 enum GameState{
@@ -8,7 +9,7 @@ enum GameState{
 }
 var CurrentGameState = GameState.Start
 var Score = 0
-var Levels = ["res://MainScene.tscn","res://level2.tscn"]
+var Levels = ["res://Levels/MainScene.tscn","res://Levels/level2.tscn"]
 var LevelIndex = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -40,6 +41,7 @@ func _process(delta: float) -> void:
 
 func RestartLevel():
 	get_tree().change_scene_to_file(Levels[LevelIndex])
+	
 	resetGameManager()
 
 func LoadNextLevel():

@@ -12,13 +12,13 @@ config_version=5
 
 config/name="Mad Birds"
 config/tags=PackedStringArray("2d", "course")
-run/main_scene="res://MainScene.tscn"
+run/main_scene="res://Levels/MainScene.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://UI/icon.svg"
 
 [autoload]
 
-GameManager="*res://GameManager.gd"
+GameManager="*res://game_manager.tscn"
 
 [display]
 

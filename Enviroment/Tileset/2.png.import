@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck7b571srdd08"
-path="res://.godot/imported/SlingshotBadPiggies.webp-cc0ffabdc65bffaf7a3053b04054b4ed.ctex"
+uid="uid://dtl0whb5f6hg3"
+path="res://.godot/imported/2.png-dc339963842c75a6da26327000ad7c5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SlingshotBadPiggies.webp"
-dest_files=["res://.godot/imported/SlingshotBadPiggies.webp-cc0ffabdc65bffaf7a3053b04054b4ed.ctex"]
+source_file="res://Enviroment/Tileset/2.png"
+dest_files=["res://.godot/imported/2.png-dc339963842c75a6da26327000ad7c5d.ctex"]
 
 [params]
 

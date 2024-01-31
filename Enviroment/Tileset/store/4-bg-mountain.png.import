@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkl1o5oqglp5i"
-path.s3tc="res://.godot/imported/tileset-test.png-90a1e262147c2926cfe292ba8db7b5d4.s3tc.ctex"
-path.etc2="res://.godot/imported/tileset-test.png-90a1e262147c2926cfe292ba8db7b5d4.etc2.ctex"
+uid="uid://dj60bvbklr07l"
+path.s3tc="res://.godot/imported/4-bg-mountain.png-bdcbc49776054dade98e2733d89e11d3.s3tc.ctex"
+path.etc2="res://.godot/imported/4-bg-mountain.png-bdcbc49776054dade98e2733d89e11d3.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Tileset/store/tileset-test.png"
-dest_files=["res://.godot/imported/tileset-test.png-90a1e262147c2926cfe292ba8db7b5d4.s3tc.ctex", "res://.godot/imported/tileset-test.png-90a1e262147c2926cfe292ba8db7b5d4.etc2.ctex"]
+source_file="res://Enviroment/Tileset/store/4-bg-mountain.png"
+dest_files=["res://.godot/imported/4-bg-mountain.png-bdcbc49776054dade98e2733d89e11d3.s3tc.ctex", "res://.godot/imported/4-bg-mountain.png-bdcbc49776054dade98e2733d89e11d3.etc2.ctex"]
 
 [params]
 

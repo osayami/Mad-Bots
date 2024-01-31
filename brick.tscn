@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6fv7sddb44xx"]
+
+[ext_resource type="Texture2D" uid="uid://i445lmo1xi4b" path="res://Tileset/brick.png" id="1_65ued"]
+[ext_resource type="Script" path="res://brick.gd" id="1_kqicr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nxb0"]
+size = Vector2(71.5, 184)
+
+[node name="Brick" type="RigidBody2D"]
+max_contacts_reported = 1
+script = ExtResource("1_kqicr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.75, -2)
+shape = SubResource("RectangleShape2D_5nxb0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.75, -1.74999)
+scale = Vector2(2.25758, 1.63274)
+texture = ExtResource("1_65ued")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

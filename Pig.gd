@@ -21,6 +21,7 @@ func _on_body_entered(body: Node) -> void:
 			else:
 				var damage = body.linear_velocity.length() * 0.7
 				health -= damage
+				GameManager.Score += damage
 				if health <=0:
 					queue_free()
 		

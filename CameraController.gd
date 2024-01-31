@@ -19,5 +19,13 @@ func _process(delta: float) -> void:
 		else:
 			followingPlayer = false
 			var tween = get_tree().create_tween()
-			tween.tween_property(self , "position" , startingPos ,2).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+			tween.tween_property(self , "position" , startingPos ,2)
+			tween.set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 			
+			
+			
+func _input(event: InputEvent) -> void:
+	if event is InputEventScreenDrag:
+		move_local_x(event.relative.x * -1)
+		move_local_y(event.relative.y * -1)
+		

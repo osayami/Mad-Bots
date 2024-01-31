@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://iuq664xqremk"
 path.s3tc="res://.godot/imported/critter-wurm-preview.png-681a52e0bc537d9b33f63acd59b1b24b.s3tc.ctex"
+path.etc2="res://.godot/imported/critter-wurm-preview.png-681a52e0bc537d9b33f63acd59b1b24b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Tileset/store/critter-wurm-preview.png"
-dest_files=["res://.godot/imported/critter-wurm-preview.png-681a52e0bc537d9b33f63acd59b1b24b.s3tc.ctex"]
+dest_files=["res://.godot/imported/critter-wurm-preview.png-681a52e0bc537d9b33f63acd59b1b24b.s3tc.ctex", "res://.godot/imported/critter-wurm-preview.png-681a52e0bc537d9b33f63acd59b1b24b.etc2.ctex"]
 
 [params]
 

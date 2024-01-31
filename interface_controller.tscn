@@ -1,0 +1,163 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu5m4j8ocx6d2"]
+
+[ext_resource type="Script" path="res://interface_controller.gd" id="1_fgoqc"]
+[ext_resource type="Texture2D" uid="uid://dppmyveeki7af" path="res://star.png" id="2_gabhf"]
+
+[node name="InterfaceController" type="CanvasLayer" groups=["InterfaceController"]]
+script = ExtResource("1_fgoqc")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -643.0
+offset_bottom = -499.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="RichTextLabel" parent="HUD"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 521.0
+offset_bottom = 207.0
+theme_override_font_sizes/normal_font_size = 100
+text = "Score:"
+
+[node name="ScoreValue" type="RichTextLabel" parent="HUD"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 12.0
+offset_right = 840.0
+offset_bottom = 153.0
+theme_override_font_sizes/normal_font_size = 100
+text = "0"
+
+[node name="Popup" type="Panel" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 230.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="RichTextLabel" parent="Popup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.7599
+offset_top = 35.4
+offset_right = 1.24005
+offset_bottom = 76.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 25
+text = "Score:"
+
+[node name="ScoreValue" type="RichTextLabel" parent="Popup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.7599
+offset_top = 35.4
+offset_right = 109.24
+offset_bottom = 76.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 25
+text = "1000
+"
+
+[node name="Star1" type="TextureRect" parent="Popup"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.252
+anchor_top = 0.326
+anchor_right = 0.252
+anchor_bottom = 0.326
+offset_left = -86.36
+offset_top = -29.0
+offset_right = 425.64
+offset_bottom = 483.0
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("2_gabhf")
+
+[node name="Star2" type="TextureRect" parent="Popup"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.252
+anchor_top = 0.326
+anchor_right = 0.252
+anchor_bottom = 0.326
+offset_left = 41.44
+offset_top = -29.4
+offset_right = 553.44
+offset_bottom = 482.6
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("2_gabhf")
+
+[node name="Star3" type="TextureRect" parent="Popup"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.252
+anchor_top = 0.326
+anchor_right = 0.252
+anchor_bottom = 0.326
+offset_left = 169.44
+offset_top = -31.4
+offset_right = 681.44
+offset_bottom = 480.6
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("2_gabhf")
+
+[node name="WonOrLose" type="RichTextLabel" parent="Popup"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -20.0
+offset_right = 484.0
+offset_bottom = 139.0
+theme_override_font_sizes/normal_font_size = 80
+text = "You Win
+"
+
+[node name="NextLevelButton" type="Button" parent="Popup"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -154.0
+offset_top = -88.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Next Level"
+
+[node name="RestartButton" type="Button" parent="Popup"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -88.0
+offset_right = 154.0
+grow_vertical = 0
+text = "Restart"
+
+[connection signal="button_down" from="Popup/NextLevelButton" to="." method="_on_next_level_button_button_down"]
+[connection signal="button_down" from="Popup/RestartButton" to="." method="_on_restart_button_button_down"]

@@ -32,6 +32,9 @@ position = Vector2(-4, -449)
 shape = SubResource("CircleShape2D_uluta")
 
 [node name="CenterOfSlingshot" type="Marker2D" parent="."]
-position = Vector2(-4, -431.325)
+position = Vector2(-4, -440)
+
+[node name="ShotArc" type="Line2D" parent="."]
+default_color = Color(0, 1, 0, 1)
 
 [connection signal="input_event" from="TouchArea" to="." method="_on_touch_area_input_event"]

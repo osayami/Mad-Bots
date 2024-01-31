@@ -33,22 +33,35 @@ func _process(delta: float) -> void:
 			pass
 			
 		SlingState.pulling:
-			#var player = get_tree().get_first_node_in_group("Player") as RigidBody2D
-			
 			if Input.is_action_pressed("Left_mouse"):
 				var distance = get_global_mouse_position()
 				
 				if distance.distance_to(CenterOfSlingshot) > 300:
 					distance = (distance - CenterOfSlingshot ).normalized() * 300 + CenterOfSlingshot
+					
 				player.position = distance
 				left_line.points[0] = distance
 				right_line.points[0] = distance
+				
+				var velocity = CenterOfSlingshot - distance
+				var actVelocity = velocity / 55 * distance
+				var pointPosition = CenterOfSlingshot
+				$ShotArc.clear_points()
+				for i in 5000:
+					$ShotArc.add_point(pointPosition)
+					actVelocity.y += 150 * delta  * -1
+					pointPosition += actVelocity * delta  * -1
+					if pointPosition.y > $ShotArc.position.y:
+						break
+				
 			else:
-				var location = get_global_mouse_position()
-				var distance = location.distance_to(CenterOfSlingshot)
-				var velocity = CenterOfSlingshot - location
+				$ShotArc.clear_points()
+				var distance = get_global_mouse_position()
+				if distance.distance_to(CenterOfSlingshot) > 300:
+					distance = (distance - CenterOfSlingshot ).normalized() * 300 + CenterOfSlingshot
+				var velocity = CenterOfSlingshot - distance
 				player.ThrowBird()
-				player.apply_impulse(velocity/150 * distance,Vector2())
+				player.apply_impulse((velocity/20 * distance) *-1,Vector2())
 				currentState = SlingState.birdThrown
 				left_line.points[0] = CenterOfSlingshot
 				right_line.points[0] = CenterOfSlingshot
@@ -61,9 +74,11 @@ func _process(delta: float) -> void:
 			var lives = get_tree().get_nodes_in_group("Player")
 			if lives.size() > 0:
 				player =  lives[0] as RigidBody2D
+				
 				get_tree().create_tween().tween_property(
 					player , "position",CenterOfSlingshot ,0.5
 					).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+				
 				if (player.global_position - CenterOfSlingshot).length() <= .1:
 					currentState = SlingState.idle
 

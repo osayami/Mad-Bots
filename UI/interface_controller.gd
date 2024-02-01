@@ -22,18 +22,18 @@ func PopupLevelCompleted(win:bool , score):
 		if score > 20:
 			$Popup/Star1.visible=true
 			tween.tween_property(
-					$Popup/Star1 , "scale",Vector2(.23,.19) ,0.5
-					).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+					$Popup/Star1 , "scale",Vector2(.23,.19) ,0.5) \
+					.set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 		if score > 50:
 			$Popup/Star2.visible=true
 			tween.tween_property(
-					$Popup/Star2 , "scale",Vector2(.23,.19) ,0.5
-					).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+					$Popup/Star2 , "scale",Vector2(.23,.19) ,0.5) \
+					.set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 		if score > 100:
 			$Popup/Star3.visible=true
 			tween.tween_property(
-					$Popup/Star3 , "scale",Vector2(.23,.19) ,0.5
-					).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+					$Popup/Star3 , "scale",Vector2(.23,.19) ,0.5) \
+					.set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 
 		$Popup/ScoreValue.text = str(int(GameManager.Score))
 	else:
